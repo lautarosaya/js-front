@@ -1,4 +1,4 @@
-console.log("JS desde Front");
+/* console.log("JS desde Front");
 const nombre = "Juana";
 console.log(nombre + " sabe JS");
 
@@ -25,12 +25,12 @@ if (todoslosdiv != null) {
       console.log("Este es el div buscado " + div.id);
     }
   });
-}
+} */
 
-let navAnchors = document.querySelectorAll("#main-navbar");
-console.log(navAnchors);
+/* let navAnchors = document.querySelectorAll("#main-navbar > a");
+console.log(navAnchors); */
 
-const listItems = document.querySelectorAll("ul#cont01 > li");
+const listItems = document.querySelectorAll("#cont01 > li");
 console.log(listItems);
 
 for (let i = 0; i < listItems.length; i++) {
