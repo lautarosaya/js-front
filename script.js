@@ -30,7 +30,7 @@ if (todoslosdiv != null) {
 /* let navAnchors = document.querySelectorAll("#main-navbar > a");
 console.log(navAnchors); */
 
-const listItems = document.querySelectorAll("#cont01 > li");
+/* const listItems = document.querySelectorAll("#cont01 > li");
 console.log(listItems);
 
 for (let i = 0; i < listItems.length; i++) {
@@ -38,4 +38,26 @@ for (let i = 0; i < listItems.length; i++) {
     listItems[i].classList.remove("alert-danger");
     listItems[i].classList.add("alert-success");
   }
-}
+} */
+
+/* CLASE 46 */
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    let errors = [];
+    let ul = document.querySelector("div.errores ul");
+
+    for (const iterator of form) {
+      if (!iterator.value) {
+        errors.push("Tiene que llenar el campo: " + iterator.name);
+      } else if (errors.length > 0) {
+        event.preventDefault();
+        errors.forEach((error) => {
+          ul.innerHTML += "<li>" + error + "</li>";
+        });
+      }
+    }
+  });
+});
