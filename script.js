@@ -42,7 +42,7 @@ for (let i = 0; i < listItems.length; i++) {
 
 /* CLASE 46 */
 
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", (event) => {
@@ -60,4 +60,45 @@ window.addEventListener("load", () => {
       }
     }
   });
-});
+}); */
+
+/* CLASE 47 */
+
+/* La diferencia entre localStorage y seccionStorage en local siguen los datos cuando cerras el navegador y seccion no */
+
+/* window.addEventListener("load", () => {
+  if (localStorage.getItem("userName") == null) {
+    let nombre = prompt("ingresa tu nombre");
+    document.querySelector(".bienvenida").innerHTML = `Hola ${nombre}`;
+
+    localStorage.setItem("userName", nombre);
+  } else {
+    document.querySelector(
+      ".bienvenida"
+    ).innerHTML = `Hola ${localStorage.getItem("userName")}`;
+  }
+}); */
+
+/* Clase en vivo */
+
+/* window.addEventListener("load", () => {
+  const list = document.querySelector(".api");
+
+  fetch("https://swapi.dev/api/people")
+    .then((response) => response.json())
+    .then((data) => {
+      let personajes = data.results;
+      personajes.forEach((personaje) => {
+        list.innerHTML += `<li>${personaje.name} / ${personaje.birth_year}</li>`;
+      });
+    });
+}); */
+
+/* window.addEventListener("load", () => {
+  const h2 = document.querySelector("h2");
+  if (localStorage.getItem("userName") == null) {
+    h2.innerHTML = "Hola visitante";
+  } else {
+    h2.innerHTML = `Hola ${localStorage.getItem("userName")}`;
+  }
+}); */
